@@ -90,5 +90,37 @@ module.exports = [
       'no-console': 'error',
       'react/prop-types': 0
     }
+  },
+  {
+    files: ['e2e-tests/**/*.js'],
+    languageOptions: {
+      ecmaVersion: 2018,
+      sourceType: 'commonjs',
+      globals: {
+        ...globals.node
+      }
+    },
+    rules: {
+      'indent': ['error', 2],
+      'linebreak-style': ['error', 'unix'],
+      'quotes': ['error', 'single'],
+      'semi': ['error', 'never']
+    }
+  },
+  {
+    files: ['playwright.config.js'],
+    languageOptions: {
+      ecmaVersion: 2018,
+      sourceType: 'module',
+      globals: {
+        ...globals.node
+      }
+    },
+    rules: {
+      'indent': ['error', 2],
+      'linebreak-style': ['error', 'unix'],
+      'quotes': ['error', 'single'],
+      'semi': ['error', 'never']
+    }
   }
 ]
